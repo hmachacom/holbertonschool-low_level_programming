@@ -6,8 +6,9 @@
 */
 int main(void)
 {
-    int a = 26;
-    char abc = 'a';
+int a = 26;
+char abc = 'a';
+
     while (a != 0)
     {
         putchar(abc);
