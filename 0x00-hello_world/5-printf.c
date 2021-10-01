@@ -1,9 +1,10 @@
 #include <stdio.h>
+
 /**
- *main - inicioo
+ * main - inicioo
  *
  *description: printf with proper grammar, but the outcome is a piece of art,
- *Retrun:always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
