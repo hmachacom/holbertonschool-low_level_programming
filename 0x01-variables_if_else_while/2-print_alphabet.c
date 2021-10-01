@@ -6,14 +6,14 @@
 */
 int main(void)
 {
-int a = 26;
-char abc = 'a';
-
-    while (a != 0)
-    {
-        putchar(abc);
-        abc ++;
-        a --;
-    }
-    return (0);
+	int a = 26, s = '\n';
+	char abc = 'a';
+	while (a != 0)
+	{
+		putchar(abc);
+		abc ++;
+		a --;
+	}
+	putchar(s);
+	return  (0);
 }
