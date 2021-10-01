@@ -6,11 +6,11 @@
 */
 int main(void)
 {
-        int a = 26, s = '\n';
-        char abc = 'a';
+	int a = 26, s = '\n';
+	char abc = 'a';
 
-        while (a != 0)
-        {
+	while (a !=0)
+	{
 		if (abc != 'q' && abc != 'e')
 		{
 			putchar(abc);
@@ -23,7 +23,7 @@ int main(void)
 		}
 		abc++;
 		a--;
-        }
-        putchar(s);
-        return  (0);
+	}
+	putchar(s);
+	return (0);
 }
