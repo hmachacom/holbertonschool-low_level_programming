@@ -5,7 +5,7 @@
  *Detalles: se inicia la libreria a usar
  *se usa la funcion main
  *El programa imprima "Programming is like building a multilingual puzzle"
- *y retorne 0
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
