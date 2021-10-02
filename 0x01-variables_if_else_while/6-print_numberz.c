@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
- * main: - It seeks to print the numbers from 0-9 only using theputcharfunction.
+ * main: - Itseekstoprint the numbers from 0-9 only using theputcharfunction.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n, s, num = '1';
-	
+	int n, s, num = '0';
+
 	s = '\n';
 	for (n = 0; n <= 9; n++)
 	{
