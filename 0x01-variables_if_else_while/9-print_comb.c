@@ -23,5 +23,7 @@ int main(void)
 		digit++;
 		cont++;
 	}
+	espa = '\n';
+	putchar(espa);
 	return (0);
 }
