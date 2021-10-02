@@ -6,8 +6,7 @@
  */
 int main(void)
 {
-	int n, s;
-	char num = '1';
+	int n, s, num = '1';
 	s = '\n';
 	for (n = 1; n <= 9; n++)
 	{
