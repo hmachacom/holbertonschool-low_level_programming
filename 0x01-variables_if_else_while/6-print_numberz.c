@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main: - Itseekstoprint the numbers from 0-9 only using theputcharfunction.
+ * main:print numbers using putchar
  *
  * Return: Always 0 (Success)
  */
