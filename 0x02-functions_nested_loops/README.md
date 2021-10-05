@@ -1,0 +1,1 @@
+In this repository we will find different exercises on the implementation of functions in c
