@@ -4,7 +4,7 @@
 *
 * Return: zero ok
 */
-/*void print_alphabet(void)
+void print_alphabet(void)
 {
 	char al;
 
@@ -13,9 +13,4 @@
 		_putchar(al);
 	}
 	_putchar('\n');
-}*/
-int main(void)
-{
-    print_alphabet();
-    return (0);
 }
