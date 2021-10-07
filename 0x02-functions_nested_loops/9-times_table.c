@@ -17,6 +17,7 @@ while (b <= c)
 		{
 		_putchar(((a) % 10) + '0');
 		_putchar(',');
+
 		}
 
 		else
@@ -25,7 +26,7 @@ while (b <= c)
 		_putchar((a % 10) + '0');
 		_putchar(',');
 		}
-		if ((a / 10) <= 0)
+		if ((a + b) <= 9)
 		{
 			_putchar(' ');
 		}
