@@ -17,8 +17,6 @@ while (b <= c)
 		{
 		_putchar(((a) % 10) + '0');
 		_putchar(',');
-		_putchar(' ');
-		 _putchar(' ');
 		}
 
 		else
@@ -26,22 +24,26 @@ while (b <= c)
 		 _putchar((a / 10) + '0');
 		_putchar((a % 10) + '0');
 		_putchar(',');
-		_putchar(' ');
 		}
+		if (((a / 10) ) <= (0))
+		{
+			_putchar(' ');
+		}
+		_putchar(' ');
 		a = a + b;
 		i++;
 	}
 	if (a < 10)
 	{
 	_putchar((a % 10) + '0');
-	_putchar('\n');
 	}
 	else
 	{
 		_putchar((a / 10) + '0');
 		_putchar((a % 10) + '0');
-	_putchar('\n');
+	
 	}
+	_putchar('\n');
 	b++;
 }
 }
