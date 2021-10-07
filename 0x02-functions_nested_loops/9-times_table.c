@@ -41,7 +41,6 @@ while (b <= c)
 	{
 		_putchar((a / 10) + '0');
 		_putchar((a % 10) + '0');
-	_putchar('$');
 	_putchar('\n');
 	}
 	b++;
