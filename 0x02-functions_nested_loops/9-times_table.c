@@ -34,7 +34,6 @@ while (b <= c)
 	if (a < 10)
 	{
 	_putchar((a % 10) + '0');
-	_putchar('$');
 	_putchar('\n');
 	}
 	else
