@@ -9,14 +9,17 @@ int main(void)
 {
 	int cont = 0;
 
-	while (cont < 99)
+	while (cont <= 89)
 	{
-		putchar(cont / 10 + '0');
-		putchar(cont % 10 + '0');
-		if (cont != 99)
+		if ((cont % 10) > (cont / 10))
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(cont / 10 + '0');
+			putchar(cont % 10 + '0');
+			if (cont < 87)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 		cont++;
 	}
