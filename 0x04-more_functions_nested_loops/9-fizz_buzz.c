@@ -1,28 +1,32 @@
-#include "main.h"
+#include <stdio.h>
 /**
-*print_diagonal(int n):-imprimir ("_") n veces;
-*@n:-dato de entrada
+*main:-imprimir Fizz Buzz;
+*
 * Return: Always 0.
 */
-void print_diagonal(int n)
+int main(void)
 {
-if (n <= 0)
-	{
-		_putchar('\n');
-	} else
-	{
-		int i, j;
+	int n = 1;
 
-		for (i = 0; i < n; i++)
+	while (n <= 100)
+	{
+		if (((n % 3) != 0) && ((n % 5) != 0))
 		{
-			for (j = 0; j < n; j++)
-			{
-				if (j == i)
-					_putchar(92);
-				else if (j < i)
-					_putchar(' ');
-			}
-			_putchar('\n');
+			printf("%d ", n);
 		}
+		else
+		{
+			if ((n % 3) == 0)
+			{
+				printf("Fizz ");
+			}
+			if ((n % 5) == 0)
+			{
+				printf("Buzz ");
+			}
+		}
+		n++;
 	}
+	putchar('\n');
+	return (0);
 }
