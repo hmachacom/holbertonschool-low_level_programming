@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *reset_to_98:- check the code
+ *swap_int:- check the code
  *@a:-punter int1.
  *@b:- punter int2.
  * Return: Always 0.
