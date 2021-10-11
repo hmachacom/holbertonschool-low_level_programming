@@ -7,10 +7,11 @@
 
 int main(void)
 {
-	int c1 = 0, c2 = 1;
+	int c1 = 0, c2 = 1, m = 1;
 
 	while (c1 < 100)
 	{
+        c2 = m;
 		while (c2 < 100)
 		{
 			putchar(c1 / 10 + '0');
@@ -30,7 +31,7 @@ int main(void)
 			c2++;
 		}
 		c1++;
-		c2++;
+		m++;
 	}
 	putchar('\n');
 	return (0);
