@@ -16,7 +16,10 @@ void print_rev(char *s)
 	s--;
 	while (l >= 0)
 	{
-		putchar(*s);
+        if (*s != '\0')
+        {
+            putchar(*s);
+        }
 		s--;
 		l--;
 	}
