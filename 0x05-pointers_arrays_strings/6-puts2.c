@@ -10,7 +10,14 @@ void puts2(char *str)
 
 	for (i = 0; str[i] != '\0'; i = i + 2)/*ciclo para avanzar posiciones en str*/
 	{
-		_putchar(str[i]);/*imprime str en la posicion i*/
+		if (i % 2 == 0)
+		{
+		putchar(str[i]);/*imprime str en la posicion i*/
+		}
+		else
+		{
+			continue;
+		}
 	}
 	_putchar('\n');
 }
