@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- *string_toupper-Converts the lowercase letters of the string to uppercase
- *letters
- *@w:String to be converted.
+ *string_toupper:-convertir a mayusculas
+ *@w:String a convertir
  *Return:w
 */
 char *string_toupper(char *w)

@@ -3,6 +3,7 @@
  *reverse_array-inverts the matrix of numbers.
  *@a:array that is reversed.
  *@n:number of array elements.
+ *Return: void
 */
 void reverse_array(int *a, int n)
 {
