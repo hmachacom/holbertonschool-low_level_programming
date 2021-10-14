@@ -11,7 +11,7 @@ void rev_string(char *s)
 
 	char *p;/*apuntador para invertir la cadena*/
 
-	char m[250];/*paraalmacenar el valor s mas grade para que funcione con todas*/
+	char m[500];/*paraalmacenar el valor s mas grade para que funcione con todas*/
 
 	strcpy(m, s);/*copio lo que esta dentro de s en m */
 	u = strlen(m) - 1;/*a un le asigno la ultima posicion de la cadena m*/
