@@ -7,17 +7,19 @@
  */
 void rev_string(char *s)
 {
-		int g, miu;
-	char character;
+	int u, i; /*variables de control*/
 
-	for (g = '\0'; s[g] != 0; g++)
+	char *p;/*apuntador para invertir la cadena*/
+
+	char m[250];/*paraalmacenar el valor s mas grade para que funcione con todas*/
+
+	strcpy(m, s);/*copio lo que esta dentro de s en m */
+	u = strlen(m) - 1;/*a un le asigno la ultima posicion de la cadena m*/
+	p = &m[u];/*a p le asigno la direccion de la ultima posicion de m*/
+	for (i = 0; *s != '\0'; i++)/*bcle copiar valores m en s invertidos*/
 	{
+		*s = *p;/*a lo que esta dentro de s le asigno lo que esta dentro de p*/
+		p--;/*le resto 1 posicion a p para ir regresando hasta la posicion inicial*/
+		s++;/*le sumo 1 a s para llegar hasta el final de s*/
 	}
-	miu = 0;
-	for (g = g - 1; miu < g; miu++)
-	{
-		character = s[g];
-		s[g] = s[miu];
-		s[miu] = character;
-		g--;
-	}
+}
