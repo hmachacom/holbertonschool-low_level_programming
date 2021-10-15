@@ -13,16 +13,19 @@ char *_strncat(char *dest, char *src, int n)
 
 	char *e = dest;
 
-	for (i = 0; *dest != '\0'; i++)
-	dest++;
-
-	for (i = 0; i < n; i++)
+	if (n > 0)
 	{
+		for (i = 0; *dest != '\0'; i++)
+		dest++;
+
+		for (i = 0; i < n; i++)
+		{
 		*dest = *src;
 		dest++;
 		src++;
+		}
+		*dest = '\0';
+		dest = e;
 	}
-	*dest = '\0';
-	dest = e;
 	return (dest);
 }
