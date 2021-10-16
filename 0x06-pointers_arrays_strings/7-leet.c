@@ -1,3 +1,8 @@
+/**
+ * leet:-funcion que incrypta un texto
+ *@encri:string int
+ * Return: Always 0.
+ */
 char *leet(char *encri)
 {
 	char let[] = "aAeEoOtTlL", num[] = "4433007711";
