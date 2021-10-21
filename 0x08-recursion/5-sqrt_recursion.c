@@ -1,8 +1,9 @@
 #include "main.h"
 #include "main.h"
 /**
- * factorial:;- retur the factrial num
- *@n:num para calcular factorial
+ * sqrt2:;- retur the raiz cuadrada num
+ *@n:num para calcular raiz cuadrada
+ *@r:interador
  * Return: factorial de num.
  */
 int sqrt2(int n, int r)
@@ -14,9 +15,9 @@ int sqrt2(int n, int r)
 	return (sqrt2(n, r + 1));
 }
 /**
- * factorial:;- retur the factrial num
- *@n:num para calcular factorial
- * Return: factorial de num.
+ * _sqrt_recursion:;- retur the raiz cuadrada num
+ *@n:num para calcular raiz cuadrada
+ * Return: raiz cuadrada de num.
  */
 int _sqrt_recursion(int n)
 {
