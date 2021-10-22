@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 /**
  *main:-progrma que suma argumentos \\n
  *@argc: lon array
@@ -8,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, l = 0;
+	int i, n, c, l = 0;
 
 	if (argc < 2)
 	{
@@ -17,6 +18,15 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
+		for (c = 0; argv[i][c] != '\0'; c++)
+		{
+			n = isdigit(argv[i][c]);
+			if ((n == 0) && (argv[i][c] != '0'))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 		if (atoi(argv[i]) == 0 && atoi(argv[i]) != '0')
 		{
 			printf("Error\n");
