@@ -16,7 +16,7 @@ char *_strdup(char *str)
 	{
 		m++;
 	}
-	m--;
+
 	migo = malloc(sizeof(char) * (m));
 	if (migo == NULL)
 		return (NULL);
@@ -24,5 +24,8 @@ char *_strdup(char *str)
 	{
 		migo[i] = str[i];
 	}
+	if (migo == NULL)
+		return (NULL);
 	return (migo);
+	free(migo);
 }
