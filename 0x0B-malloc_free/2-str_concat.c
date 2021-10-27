@@ -11,37 +11,34 @@ char *str_concat(char *s1, char *s2)
 
 	char *migo;
 
-	if ((s1 == NULL) && (s2 != NULL))
-		return (s2);
-	if ((s2 == NULL) && (s1 != NULL))
-		return (s1);
 	if ((s2 == NULL) && (s1 == NULL))
-		return (NULL);
-	while (s1[m] != '\0')
 	{
-		m++;
+		migo = malloc(sizeof(char) * (2));
+		for (i = 0; i <= 2; migo[i] = '\0', i++);
+		return (migo);
 	}
-	while (s2[i] != '\0')
+	if ((s2 == NULL) && (s1 != NULL))
 	{
-		i++;
+		for (m = 0; s1[m] != '\0'; m++);
+		migo = malloc(sizeof(char) * (m + 1));
+		for (i = 0; s1[i] != '\0'; migo[i] = s1[i], i++);
+		return (migo);
 	}
+	if ((s1 == NULL) && (s2 != NULL))
+	{
+		for (i = 0; s2[i] != '\0'; i++);
+		migo = malloc(sizeof(char) * (i + 1));
+		for (m = 0; s2[m] != '\0'; migo[m] = s2[m], m++);
+		return (migo);
+	}
+	for (m = 0; s1[m] != '\0'; m++);
+	for (i = 0; s2[i] != '\0'; i++);
 	m += i;
-	migo = malloc(sizeof(char) * (m) + 1);
+	migo = malloc(sizeof(char) * (m + 1));
 	if (migo == NULL)
 		return (NULL);
-	m = 0;
-	i = 0;
-
-	while (s1[m] != '\0')
-	{
-		migo[m] = s1[m];
-		m++;
-	}
-	while (s2[i] != '\0')
-	{
-		migo[m + i] = s2[i];
-		i++;
-	}
+	for (m = 0; s1[m] != '\0'; migo[m] = s1[m], m++);
+	for (i = 0; s2[i] != '\0'; i++);
 	migo[i + m + 1] = '\0';
 	return (migo);
 }
