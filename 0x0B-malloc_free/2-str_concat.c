@@ -42,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	for (m = 0; s1[m] != '\0'; migo[m] = s1[m], m++)
 		;
-	for (i = 0; s2[i] != '\0'; i++)
+	for (i = 0; s2[i] != '\0'; migo[m + i] = s2[i], i++)
 		;
 	migo[i + m + 1] = '\0';
 	return (migo);
