@@ -13,12 +13,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *h;
 
 	if (s1 == NULL)
-		i = 1;
+		i = 0;
 	else
 	for (i = 0; s1[i] != '\0'; i++)
 		;
 	if (s2 == NULL)
-		m = 1;
+		m = 0;
 	else
 	for (m = 0; s2[m] != '\0'; m++)
 		;
