@@ -12,8 +12,6 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	if (min == NULL || max == NULL)
-		return (NULL);
 	matrix = malloc(sizeof(int) * (max - min) + 1);
 	if (matrix == NULL)
 		return (NULL);
