@@ -15,7 +15,7 @@ int *array_range(int min, int max)
 	matrix = malloc(sizeof(int) * ((max - min) + 1));
 	if (matrix == NULL)
 		return (NULL);
-	for (i = 0; i <= max; i++)
+	for (i = 0; i <= (min - max); i++)
 	{
 		*(matrix + i) = min + i;
 	}
