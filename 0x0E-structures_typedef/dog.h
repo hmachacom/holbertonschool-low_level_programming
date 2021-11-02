@@ -16,4 +16,16 @@ struct dog
 #include <stdio.h>
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+/**
+ *struct dog-new structura
+ *@name:-nombre
+ *@age:-edad
+ *@owner:-Dueño
+ */
+typedef struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+} dog_t;
 #endif
