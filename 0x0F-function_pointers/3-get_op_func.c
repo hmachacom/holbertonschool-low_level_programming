@@ -1,8 +1,26 @@
-#ifndef CALC_C
-#define CALC_C
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
-#endif
+#include "3-calc.h"
+/**
+ * get_op_func:-tipo de operacion
+ * @s: The operator
+ * Return:-operacion or null
+ */
+int (*get_op_func(char *s))(int, int)
+{
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+		};
+	int i = 0;
+
+	while (!(ops[i].op == s))
+	{
+		if (strcmp(ops[i].op, s) == 0)
+			return (ops[i].f);
+		i++;
+	}
+	return (0);
+}
