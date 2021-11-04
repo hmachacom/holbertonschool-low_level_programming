@@ -10,19 +10,21 @@ void print_all(const char *const format, ...)
 	va_list h;
 
 	va_start(h, format);
+	if (!format)
+		return;
 	while (format[i])
 	{
 		switch (format[i])
 		{
 		case 'c':
-				printf("%c", va_arg(h, int));
-				break;
+			printf("%c", va_arg(h, int));
+			break;
 		case 'i':
-				printf("%d", va_arg(h, int));
-				break;
+			printf("%d", va_arg(h, int));
+			break;
 		case 'f':
-				printf("%f", va_arg(h, double));
-				break;
+			printf("%f", va_arg(h, double));
+			break;
 		case 's':
 			p = va_arg(h, char *);
 			p ? printf("%s", p) : printf("(nil)");
