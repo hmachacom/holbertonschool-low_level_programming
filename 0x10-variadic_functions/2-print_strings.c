@@ -9,11 +9,18 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list iter;
 	unsigned int h, k;
+	char *g;
 
 	va_start(iter, n);
 	for (h = 0; h < n; h++)
 	{
-		printf("%s", va_arg(iter, char *));
+		g = va_arg(iter, char*);
+		if (g == NULL)
+		{
+			g = "(nil)";
+		}
+
+		printf("%s", g);
 		if (h < n - 1)
 		{
 			if (separator != NULL)
@@ -25,7 +32,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			}
 			else
 			{
-				printf("(nil)");
+				continue;
 			}
 		}
 	}
