@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- *print_numbers:-funcion que imprime n numeros separados por un caracter
- *@h: lon array
- * Return: Always 0s
+ *print_list:-function print linked list
+ *@h: linked list
+ * Return: long linked list
  */
 size_t print_list(const list_t *h)
 {
