@@ -1,15 +1,14 @@
 #include "lists.h"
 /**
- *add_node:-add new nodo a linked list
+ *free_list:-free linked list
  *@head: linked list
- *@str:string
  * Return: long linked list
  */
 void free_list(list_t *head)
 {
 	list_t *intet;
 
-	while(head)
+	while (head)
 	{
 		intet = head->next;
 		free(head->str);
