@@ -1,17 +1,15 @@
 #include "lists.h"
 /**
- *print_listint:-function print linked list
+ *listint_len:-function return lon  linked list
  *@h: linked list
  * Return: long linked list
  */
-size_t print_listint(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
 	size_t count = 0;
-	/*list_t avanced*/
 
 	while (h)
 	{
-		printf("%d\n", h->n);
 		count++;
 		h = h->next;
 	}
