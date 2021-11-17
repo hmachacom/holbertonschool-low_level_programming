@@ -1,9 +1,8 @@
 #include "lists.h"
 /**
- *insert_nodeint_at_index:-function that returns the nth node of
- *@idx:is the index of the node
+ *delete_nodeint_at_index:-function that returns the nth node of
+ *@index:is the index of the node
  *@head:-linked list
- *@n:new value
  * Return: long linked list
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
