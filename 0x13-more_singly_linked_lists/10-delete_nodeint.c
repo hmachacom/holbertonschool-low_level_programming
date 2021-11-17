@@ -1,37 +1,39 @@
 #include "lists.h"
 /**
- *delete_nodeint_at_index:-function that returns the nth node of
- *@index:is the index of the node
+ *insert_nodeint_at_index:-function that returns the nth node of
+ *@idx:is the index of the node
  *@head:-linked list
+ *@n:new value
  * Return: long linked list
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *tmp;
+	listint_t *tmp, *tmp2 = NULL;
 	unsigned int count = 1;
 
-	tmp = (*head)->next;
-	if (!*head)
+	if (!*head || !head)
 		return (-1);
+	tmp = *head;
 	if (index == 0)
 	{
-		free(*head);
-		free(head);
-		*head = tmp;
+		*head = tmp->next;
+		free(tmp);
 		return (1);
 	}
-	while ((*head))
+	tmp = tmp->next;
+	while (tmp)
 	{
-		if (count == index)
+		if (count + 1 == index)
 		{
-			/*free(*head);*/
-			free(head);
-			*head = tmp;
-			return (1);
+			break;
 		}
-		tmp = (*head)->next;
-		*head = tmp;
+		tmp = tmp->next;
+		if (!tmp)
+			return (-1);
 		count++;
 	}
-	return (-1);
+	tmp2 = tmp->next;
+	tmp->next = tmp2->next;
+	free(tmp2);
+	return (1);
 }
