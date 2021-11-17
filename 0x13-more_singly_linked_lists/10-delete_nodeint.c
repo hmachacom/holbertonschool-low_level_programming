@@ -32,10 +32,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (count < index)
 		return (-1);
 	if (!tmp)
-	{
-		free(tmp);
 		return (-1);
-	}
 	tmp2 = tmp->next;
 	tmp->next = tmp2->next;
 	free(tmp2);
