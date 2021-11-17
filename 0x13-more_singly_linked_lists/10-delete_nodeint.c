@@ -27,11 +27,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			break;
 		}
 		tmp = tmp->next;
+		if (!tmp)
+			return (-1);
 		count++;
 	}
-	count--;
-	if (count <= index)
-		return (-1);
+	/*if (count <= index)
+		return (-1);*/
 	if (!tmp)
 		return (-1);
 	tmp2 = tmp->next;
