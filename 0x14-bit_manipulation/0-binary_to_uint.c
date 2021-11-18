@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *print_listint:-function print linked list
- *@h: linked list
- * Return: long linked list
+ *binary_to_uint:-convert bin to deci
+ *@b: linked list
+ * Return: decim
  */
 unsigned int binary_to_uint(const char *b)
 {
