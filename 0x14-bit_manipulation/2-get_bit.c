@@ -7,14 +7,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i, u;
-	unsigned long int n2 = n;
-
-	for (i = 0; n2 > 1; i++)
-		n2 = (n2 >> 1);
-	for (u = 0; u < index; u++)
-		;
-	if (index > i)
+	if (index > 64)
 		return (-1);
-	return ((n >> u) & 1);
+	return ((n >> index) & 1);
 }
