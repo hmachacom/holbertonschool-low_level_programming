@@ -7,21 +7,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int field;
+	int o, w, c;
 	char *buf = malloc(sizeof(filename) * letters);
-	ssize_t n_bytes;
+	ssize_t r;
 
 	if (!filename || !buf)
 		return (0);
-	field = open(filename, O_RDONLY);
-	if (field == -1)
+	o = open(filename, O_RDONLY);
+	r = read(o, buf, letters);
+	w = write(0, buf, r);
+	c = close(o);
+	if (o == -1 || r == -1 || w == -1 || c == -1)
 		return (0);
-	n_bytes = read(field, buf, letters);
-	close(field);
-	if (n_bytes == -1)
-		return (0);
-	write(0, buf, n_bytes);
-	if (n_bytes < (ssize_t)letters)
-		n_bytes++;
-	return (n_bytes);
+	if (r < (ssize_t)letters)
+		r++;
+	free(buf);
+	return (r);
 }
