@@ -7,14 +7,14 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int field;
+	int o, w, c;
 
 	if (!filename || !text_content)
 		return (-1);
-	field = open(filename, 2 | O_CREAT, 0600);
-	if (field == -1)
-		return (0);
-	write(field, text_content, strlen(text_content) + 1);
-	close(field);
+	o = open(filename, 2 | O_CREAT, 0600);
+	w = write(o, text_content, strlen(text_content));
+	c = close(o);
+	if (o == -1 || c == -1 || w == -1)
+		return (-1);
 	return (1);
 }
