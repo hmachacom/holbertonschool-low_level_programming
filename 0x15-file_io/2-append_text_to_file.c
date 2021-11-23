@@ -3,7 +3,7 @@
  *append_text_to_file:-function that reads a text file and prints
  *@filename: filename
  *@text_content: erminated string to add at the end of the file
- * Return: -1 error or 0 no 
+ * Return: -1 error or 0 no
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
