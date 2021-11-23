@@ -22,5 +22,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	write(0, buf, n_bytes);
 	if (n_bytes < (ssize_t)letters)
 		n_bytes++;
+	close(field);
 	return (n_bytes);
 }
