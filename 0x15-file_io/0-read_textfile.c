@@ -17,11 +17,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (field == -1)
 		return (0);
 	n_bytes = read(field, buf, letters);
+	close(field);
 	if (n_bytes == -1)
 		return (0);
 	write(0, buf, n_bytes);
 	if (n_bytes < (ssize_t)letters)
 		n_bytes++;
-	close(field);
 	return (n_bytes);
 }
