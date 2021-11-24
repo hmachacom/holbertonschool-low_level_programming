@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - cp
+ * main - check the code
  *@argc:count argument
  *@argv:argument
  * Return: Always 0.
@@ -24,12 +24,14 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
-	};
-	while ((o = read(file1, buf, 1024)) > 0)
+	}
+	o = read(file1, buf, 1024);
+	while (o > 0)
 	{
 		w = write(file2, buf, o);
 		if (w < 0)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		o = read(file1, buf, 1024);
 	}
 	if (o == -1)
 	{
