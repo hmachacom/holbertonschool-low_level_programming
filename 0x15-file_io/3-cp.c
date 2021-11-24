@@ -19,18 +19,18 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	file2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (file2 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+	file2 = open(argv[2], O_CREAT | 2 | O_TRUNC, 0664);
 	o = read(file1, buf, 1024);
 	o2 = read(file2, buf, 1024);
 	if (o == -1 || o2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
+	}
+	if (file2 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	while (o > 0)
 	{
