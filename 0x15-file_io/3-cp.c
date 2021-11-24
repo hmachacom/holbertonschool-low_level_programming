@@ -9,15 +9,11 @@
 int main(int argc, char *argv[])
 {
 	int file1, file2, c1, c2, w;
-	char *buf;
+	char *buf = malloc(sizeof(char) * 1024);
 	ssize_t o = 0;
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-	buf = malloc(sizeof(char) * 1024);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	if (!buf)
 		return (-1);
 	file1 = open(argv[1], O_RDONLY);
@@ -28,8 +24,14 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	file2 = open(argv[2], 2 | O_CREAT | O_TRUNC, 0664);
-	w = write(file2, buf, o);
-	if (file2 == -1 || w == -1)
+	while (o > 0)
+	{
+		w = write(file2, buf, o);
+		if (w < 0)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		o = read(file1, buf, 1024);
+	}
+	if (file2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
