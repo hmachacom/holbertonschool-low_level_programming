@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - cp
  *@argc:count argument
  *@argv:argument
  * Return: Always 0.
