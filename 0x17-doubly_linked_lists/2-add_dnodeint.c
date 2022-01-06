@@ -1,30 +1,29 @@
 #include "lists.h"
 /**
- *print_dlistint:-function print doublylinked list
- *@h: linked list
+ *add_dnodeint:-function add new nod doublylinked list
+ *@head:-Dlink
+ *@n:-int
  * Return: long linked list
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t new_nodo;
+	dlistint_t *new_nodo;
 
-	new_nodo.next = malloc(sizeof(dlistint_t));
-	if (!new_nodo.next)
+	new_nodo = malloc(sizeof(dlistint_t));
+	if (!new_nodo)
 		return (NULL);
-	new_nodo.n = n;
+	new_nodo->n = n;
+	new_nodo->next = NULL;
+	new_nodo->prev = NULL;
 	if (!*head)
 	{
-		new_nodo.next = NULL;
-		new_nodo.prev = NULL;
-		*head = &new_nodo;
+		*head = new_nodo;
 	}
 	else
 	{
-		(*head)->next = &new_nodo;
-		new_nodo.prev = *head;
-		new_nodo.next = NULL;
-		printf("hugo\n");
+		new_nodo->next = *head;
+		(*head)->prev = new_nodo;
+		*head = new_nodo;
 	}
-	printf("%djhj\n", (*head)->n);
-	return(*head);
+	return (new_nodo);
 }
