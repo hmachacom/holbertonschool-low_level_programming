@@ -1,5 +1,5 @@
-#ifndef DOUBLYLINKED_LIST
-#define DOUBLYLINKED_LIST
+#ifndef DYNAMICLIBRARY
+#define DYNAMICLIBRARY
 #include <stdlib.h>
 int _putchar(char c);
 int _islower(int c);
