@@ -17,10 +17,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (index >= ht->size)
 		return (0);
 
-	new_node = malloc(sizeof(hash_node_t));
+	new_node = malloc(sizeof(hash_node_t *));
 	if (!new_node)
 		return (0);
-	tmp = malloc(sizeof(hash_node_t));
+	tmp = malloc(sizeof(hash_node_t *));
 	if (!tmp)
 		return (0);
 	if (ht->array[index] == NULL)
