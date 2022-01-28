@@ -1,10 +1,9 @@
 #include "hash_tables.h"
 /**
- *hash_table_set:-creat a hash table
+ *hash_table_get:-get a hash table
  *@ht:-is the hash table you want to add or update the key/value to
  *@key:-is the key
- *@value:-is the value associated with the key
- * Return: 1 full or 0 error
+ * Return: value or Null
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
