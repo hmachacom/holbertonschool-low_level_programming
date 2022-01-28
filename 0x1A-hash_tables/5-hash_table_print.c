@@ -8,6 +8,8 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int index, val = 0, index2;
 
+	if (!ht || !ht->array)
+		return;
 	if (ht)
 	{
 		for (index = 0; index <= ht->size; index++)
