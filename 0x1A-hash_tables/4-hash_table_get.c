@@ -9,7 +9,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index;
 
-	if (!ht || !key)
+	if (!ht || !key || !ht->array)
 		return (NULL);
 	if (strcmp(key, "") == 0)
 		return (NULL);
@@ -18,5 +18,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	if (!ht->array[index])
 		return (NULL);
+
 	return (ht->array[index]->value);
 }
