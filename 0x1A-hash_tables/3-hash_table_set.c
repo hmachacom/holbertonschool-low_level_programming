@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- *hash_table_create:-creat a hash table
+ *hash_table_set:-creat a hash table
  *@ht:-is the hash table you want to add or update the key/value to
  *@key:-is the key
  *@value:-is the value associated with the key
