@@ -5,6 +5,14 @@ grid es una lista de lista de enteros
 
 
 def island_perimeter(grid):
+    """_summary_
+
+    Args:
+        grid (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     width = len(grid[0])
     height = len(grid)
     edges = 0
